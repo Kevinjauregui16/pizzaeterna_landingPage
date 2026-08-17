@@ -1,0 +1,33 @@
+---
+interface Props {
+	class?: string;
+}
+const { class: className = "" } = Astro.props;
+---
+
+<svg viewBox="0 0 300 220" class={className} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de tomates y aceite de oliva">
+	<ellipse cx="150" cy="205" rx="120" ry="10" fill="#00000020" />
+
+	<g>
+		<path d="M60 160c-2-14 10-25 24-25s26 11 24 25-24 30-24 30-26-16-24-30Z" fill="var(--color-sauce)" />
+		<path d="M84 135c-2-8 2-14 8-16" stroke="var(--color-basil)" stroke-width="4" stroke-linecap="round" fill="none" />
+	</g>
+	<g transform="translate(35 20)">
+		<path d="M60 160c-2-14 10-25 24-25s26 11 24 25-24 30-24 30-26-16-24-30Z" fill="#c94a3d" />
+		<path d="M84 135c-2-8 2-14 8-16" stroke="var(--color-basil)" stroke-width="4" stroke-linecap="round" fill="none" />
+	</g>
+
+	<g transform="translate(150 10)">
+		<path d="M20 30c40-14 70 6 78 34" stroke="var(--color-basil)" stroke-width="4" fill="none" stroke-linecap="round" />
+		<ellipse cx="30" cy="26" rx="10" ry="5" fill="var(--color-basil)" transform="rotate(-25 30 26)" />
+		<ellipse cx="52" cy="34" rx="10" ry="5" fill="var(--color-basil)" transform="rotate(-10 52 34)" />
+		<ellipse cx="74" cy="48" rx="10" ry="5" fill="var(--color-basil)" transform="rotate(15 74 48)" />
+		<ellipse cx="94" cy="64" rx="10" ry="5" fill="var(--color-basil)" transform="rotate(30 94 64)" />
+
+		<path d="M70 60h20l6 100a13 13 0 0 1-13 14h-6a13 13 0 0 1-13-14Z" fill="var(--color-crust)" opacity="0.35" />
+		<path d="M74 50h12v14h-12z" fill="var(--color-crust)" />
+		<rect x="68" y="60" width="24" height="96" rx="10" fill="#4d6b3f" opacity="0.85" />
+		<rect x="68" y="60" width="24" height="96" rx="10" fill="none" stroke="#2b3a26" stroke-width="2" />
+		<rect x="71" y="90" width="18" height="30" rx="3" fill="var(--color-cheese)" opacity="0.9" />
+	</g>
+</svg>

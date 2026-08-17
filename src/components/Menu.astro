@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import menu1 from '../assets/menu-1.png';
+
+const pizzas = [
+	{ name: "Margherita", desc: "Salsa de tomate San Marzano, mozzarella fresca, albahaca, aceite de oliva extra virgen.", price: "13.99", tint: "bg-cream-dark" },
+	{ name: "Pepperoni", desc: "Salsa San Marzano, mozzarella, pepperoni premium.", price: "14.99", tint: "bg-primary/10" },
+	{ name: "Cuatro Quesos", desc: "Mozzarella, gorgonzola, parmesano, fontina, miel de trufa.", price: "15.99", tint: "bg-cream-dark" },
+	{ name: "Prosciutto y Rúgula", desc: "Salsa San Marzano, mozzarella, prosciutto, rúgula, parmesano.", price: "16.99", tint: "bg-forest/10" },
+	{ name: "Delicia Vegetariana", desc: "Salsa San Marzano, mozzarella, pimientos, aceitunas, champiñones.", price: "14.99", tint: "bg-cream-dark" },
+	{ name: "Diavola", desc: "Salsa San Marzano, mozzarella, salami picante calabrés.", price: "15.99", tint: "bg-primary/10" },
+];
+---
+
+<section id="menu" class="bg-cream">
+	<div class="mx-auto max-w-7xl px-6 py-20 lg:px-10">
+		<div class="mb-10 flex flex-wrap items-end gap-4">
+			<h2 class="flex items-center gap-3 font-display text-3xl font-black tracking-wide sm:text-4xl">
+			LOS DESTACADOS <span class="text-primary">★</span>
+			</h2>
+			<a href="#menu-completo" class="ml-auto shrink-0 text-sm font-semibold tracking-wide text-primary hover:underline">
+				VER MENÚ COMPLETO &rarr;
+			</a>
+		</div>
+
+		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{pizzas.map((p) => (
+				<div class="group overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-ink/5 transition-shadow hover:shadow-lg">
+					<div class:list={["flex aspect-square items-center justify-center overflow-hidden", p.tint]}>
+						<Image src={menu1} alt={p.name} class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" width={736} height={1104} />
+					</div>
+					<div class="p-5">
+						<h3 class="font-display text-base font-bold tracking-wide">{p.name.toUpperCase()}</h3>
+						<p class="mt-1.5 text-xs leading-relaxed text-ink/60">{p.desc}</p>
+						<div class="mt-4 flex items-center">
+							<span class="font-display text-lg font-bold text-primary">${p.price}</span>
+						</div>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

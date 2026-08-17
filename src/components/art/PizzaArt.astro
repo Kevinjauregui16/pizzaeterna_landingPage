@@ -1,0 +1,62 @@
+---
+interface Props {
+	class?: string;
+}
+const { class: className = "" } = Astro.props;
+---
+
+<svg viewBox="0 0 200 200" class={className} xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de pizza">
+	<circle cx="100" cy="100" r="97" fill="var(--color-crust)" />
+	<g fill="#00000030">
+		<ellipse cx="35" cy="55" rx="4" ry="3" />
+		<ellipse cx="168" cy="68" rx="3" ry="4" />
+		<ellipse cx="152" cy="162" rx="4" ry="3" />
+		<ellipse cx="42" cy="158" rx="3" ry="3" />
+		<ellipse cx="100" cy="10" rx="3" ry="3" />
+		<ellipse cx="190" cy="112" rx="3" ry="3" />
+		<ellipse cx="14" cy="105" rx="3" ry="3" />
+	</g>
+
+	<circle cx="100" cy="100" r="80" fill="var(--color-sauce)" />
+	<circle cx="100" cy="100" r="73" fill="var(--color-cheese)" />
+
+	<g fill="#00000012">
+		<circle cx="68" cy="68" r="10" />
+		<circle cx="132" cy="58" r="8" />
+		<circle cx="142" cy="128" r="9" />
+		<circle cx="58" cy="132" r="7" />
+		<circle cx="102" cy="98" r="6" />
+	</g>
+
+	<g fill="var(--color-pepperoni)">
+		<circle cx="72" cy="54" r="13" />
+		<circle cx="132" cy="50" r="12" />
+		<circle cx="152" cy="96" r="13" />
+		<circle cx="128" cy="142" r="12" />
+		<circle cx="68" cy="146" r="13" />
+		<circle cx="48" cy="100" r="12" />
+		<circle cx="100" cy="100" r="12" />
+	</g>
+	<g fill="#00000022">
+		<circle cx="69" cy="51" r="1.6" />
+		<circle cx="76" cy="58" r="1.6" />
+		<circle cx="129" cy="47" r="1.6" />
+		<circle cx="135" cy="54" r="1.6" />
+		<circle cx="149" cy="93" r="1.6" />
+		<circle cx="155" cy="99" r="1.6" />
+		<circle cx="125" cy="139" r="1.6" />
+		<circle cx="131" cy="145" r="1.6" />
+		<circle cx="65" cy="143" r="1.6" />
+		<circle cx="71" cy="149" r="1.6" />
+		<circle cx="45" cy="97" r="1.6" />
+		<circle cx="51" cy="103" r="1.6" />
+		<circle cx="97" cy="97" r="1.6" />
+		<circle cx="103" cy="103" r="1.6" />
+	</g>
+
+	<g fill="var(--color-basil)">
+		<ellipse cx="96" cy="60" rx="7" ry="4" transform="rotate(-20 96 60)" />
+		<ellipse cx="150" cy="122" rx="7" ry="4" transform="rotate(35 150 122)" />
+		<ellipse cx="52" cy="118" rx="7" ry="4" transform="rotate(-45 52 118)" />
+	</g>
+</svg>

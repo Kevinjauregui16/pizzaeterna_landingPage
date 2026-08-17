@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import heroPizza from '../assets/hero-pizza5.png';
+import { whatsappUrl } from '../lib/whatsapp';
+---
+
+<section id="inicio" class="relative overflow-hidden bg-cream">
+	<div class="mx-auto grid max-w-7xl items-center gap-10 px-6 py-14 lg:grid-cols-2 lg:px-10 lg:py-8">
+		<div>
+			<p class="mb-3 flex items-center gap-2 font-script text-2xl text-forest">
+				Estilo Chicago
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+			</p>
+			<h1 class="font-display text-5xl font-black leading-[1.05] sm:text-6xl">
+				PIZZA VERDADERA.<br />
+				<span class="text-primary">PASIÓN ETERNA.</span>
+			</h1>
+			<p class="mt-6 max-w-md text-base leading-relaxed text-ink/70">
+				Elaborada con ingredientes frescos, masa estirada a mano y horneada a la perfección en horno de leña. Prueba la tradición en cada bocado.
+			</p>
+			<div class="mt-8 flex flex-wrap gap-4">
+				<a href="#menu" class="rounded-md bg-primary px-7 py-3.5 text-sm font-semibold tracking-wide text-cream shadow-md hover:bg-primary-dark transition-colors">
+					VER MENÚ
+				</a>
+				<a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="rounded-md border-2 border-ink px-7 py-3.5 text-sm font-semibold tracking-wide text-ink hover:bg-ink hover:text-cream transition-colors">
+					ORDENAR X WHATSAPP
+				</a>
+			</div>
+		</div>
+
+		<div class="relative">
+			<div class="relative aspect-[4/4] w-full overflow-hidden rounded-2xl bg-ink shadow-2xl">
+				<Image
+					src={heroPizza}
+					alt="Porción de pizza con queso derretido, pepperoni y vegetales, recién horneada"
+					class="h-full w-full object-cover object-[65%_45%]"
+					width={1200}
+					height={900}
+					loading="eager"
+				/>
+			</div>
+		</div>
+	</div>
+</section>

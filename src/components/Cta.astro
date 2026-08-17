@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import pizza from '../assets/cta.png';
+import { whatsappUrl } from '../lib/whatsapp';
+
+const perks = [
+	{ title: "ENTREGA RÁPIDA", desc: "Rápida y confiable", icon: "truck" },
+	{ title: "PEDIDO FÁCIL", desc: "Compra en línea sencilla", icon: "phone" },
+	{ title: "CALIENTE Y FRESCA", desc: "Recién hecha, entregada rápido", icon: "flame" },
+];
+
+const icons: Record<string, string> = {
+	truck: '<path d="M14 18V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h1"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>',
+	phone: '<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>',
+	flame: '<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>',
+};
+---
+
+<section class="bg-primary">
+	<div class="mx-auto grid max-w-7xl items-center gap-10 px-6 py-14 lg:grid-cols-[280px_1fr_auto] lg:px-10">
+		<div class="hidden aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-xl bg-primary-dark/40 lg:flex">
+			<Image src={pizza} alt="Pizza recién horneada" class="h-full w-full object-cover" width={572} height={1017} />
+		</div>
+
+		<div>
+			<h2 class="font-display text-3xl font-black text-cream sm:text-4xl">¿ANTOJO DE PIZZA?</h2>
+			<p class="mt-2 max-w-md text-sm text-cream/80">
+				Pide en línea y disfruta tu pizza favorita caliente y fresca en tu puerta.
+			</p>
+			<div class="mt-6 flex flex-wrap gap-8">
+				{perks.map((p) => (
+					<div class="flex items-center gap-3">
+						<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f7ede1" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" set:html={icons[p.icon]} />
+						<div>
+							<p class="text-xs font-bold tracking-wide text-cream">{p.title}</p>
+							<p class="text-[11px] text-cream/70">{p.desc}</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+
+		<a
+			href={whatsappUrl}
+			target="_blank"
+			rel="noopener noreferrer"
+			class="flex shrink-0 items-center justify-center gap-2 rounded-md bg-cream px-8 py-4 text-sm font-bold tracking-wide text-primary shadow-md hover:bg-cream-dark transition-colors"
+		>
+			ORDENAR X WHATSAPP
+		</a>
+	</div>
+</section>

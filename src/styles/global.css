@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+	--font-display: "Playfair Display", serif;
+	--font-script: "Dancing Script", cursive;
+	--font-sans: "Poppins", sans-serif;
+
+	--color-cream: #f7ede1;
+	--color-cream-dark: #efe0cb;
+	--color-primary: #e0742f;
+	--color-primary-dark: #b8551c;
+	--color-forest: #2b3a26;
+	--color-forest-dark: #1c2818;
+	--color-ink: #221a14;
+
+	--color-crust: #d9a35f;
+	--color-cheese: #f3d18b;
+	--color-sauce: #b23a2e;
+	--color-basil: #3f6b3a;
+	--color-pepperoni: #9c2b26;
+}
+
+body {
+	font-family: var(--font-sans);
+	background-color: var(--color-cream);
+	color: var(--color-ink);
+}

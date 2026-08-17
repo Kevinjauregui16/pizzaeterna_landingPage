@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+
+const socials = [
+	{ label: "Facebook", path: '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>' },
+	{ label: "Instagram", path: '<rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/>' },
+	{ label: "TikTok", path: '<path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>' },
+];
+---
+
+<footer id="contacto" class="bg-ink text-cream/80">
+	<div class="mx-auto flex max-w-7xl flex-col items-center gap-5 px-6 py-16 text-center lg:px-10">
+		<Image src={logo} alt="Pizza Eterna &mdash; Chicago Style, MMXXV" class="h-12 w-auto" width={898} height={325} />
+		<p class="max-w-md text-xs leading-relaxed text-cream/50">
+			El único sabor italiano con estilo americano &mdash; Chicago Style desde MMXXV.
+		</p>
+		<div class="flex gap-3">
+			{socials.map((s) => (
+				<a
+					href="#"
+					aria-label={s.label}
+					class="grid h-9 w-9 place-items-center rounded-full border border-cream/20 text-cream/70 hover:border-primary hover:text-primary transition-colors"
+				>
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={s.path} />
+				</a>
+			))}
+		</div>
+	</div>
+
+	<div class="border-t border-cream/10 px-6 py-5 text-center text-xs text-cream/40">
+		© 2026 Pizza Eterna. Todos los derechos reservados.
+	</div>
+</footer>

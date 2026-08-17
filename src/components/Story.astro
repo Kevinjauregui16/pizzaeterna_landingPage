@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import PizzaArt from './art/PizzaArt.astro';
+import storyPizza from '../assets/story.png';
+---
+
+<section id="historia" class="bg-cream">
+	<div class="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-10">
+		<div class="relative aspect-[5/4] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#2a1c14] via-ink to-forest-dark shadow-xl">
+			<Image src={storyPizza} alt="Pizza recién horneada con queso derretido y pepperoni" class="absolute inset-0 h-full w-full object-cover" width={736} height={1104} />
+			<div class="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent"></div>
+			<div class="absolute -left-10 -top-10 h-56 w-56 rounded-full bg-primary/30 blur-3xl"></div>
+			<div class="absolute -bottom-16 -right-10 h-64 w-64 rounded-full bg-forest/40 blur-3xl"></div>
+			<div class="absolute right-16 top-10 h-24 w-24 rounded-full bg-cheese/20 blur-2xl"></div>
+			<span class="absolute left-8 top-8 -rotate-2 rounded-md border border-primary/60 bg-ink/60 px-4 py-2 font-script text-2xl text-[#ff8f87] shadow-[0_0_18px_rgba(255,90,80,0.45)] backdrop-blur-sm">
+				Buon Appetito!
+			</span>
+		</div>
+
+		<div>
+			<p class="mb-2 flex items-center gap-2 text-sm font-bold tracking-[0.2em] text-primary">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/></svg>
+				NUESTRA HISTORIA
+			</p>
+			<h2 class="font-display text-4xl font-black leading-tight sm:text-5xl">
+				MÁS QUE PIZZA,<br />
+				<span class="text-primary">ES UNA EXPERIENCIA.</span>
+			</h2>
+			<p class="mt-6 max-w-lg text-base leading-relaxed text-ink/70">
+				En Pizza Eterna reunimos a las personas alrededor de comida deliciosa, buena energía y momentos inolvidables. De nuestra familia a la tuya, gracias por ser parte de nuestra historia.
+			</p>
+			<p class="mt-6 font-script text-3xl text-primary">Grazie mille! ♥</p>
+		</div>
+	</div>
+</section>
