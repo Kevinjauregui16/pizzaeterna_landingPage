@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import heroPizza from '../assets/hero-pizza5.png';
-import { whatsappUrl } from '../lib/whatsapp';
+import { whatsappUrl } from '../lib/whatsapp_reservar';
 ---
 
 <section id="inicio" class="relative overflow-hidden bg-cream">
@@ -22,8 +22,8 @@ import { whatsappUrl } from '../lib/whatsapp';
 				<a href="#menu" class="rounded-md bg-primary px-7 py-3.5 text-sm font-semibold tracking-wide text-cream shadow-md hover:bg-primary-dark transition-colors">
 					VER MENÚ
 				</a>
-				<a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="rounded-md border-2 border-ink px-7 py-3.5 text-sm font-semibold tracking-wide text-ink hover:bg-ink hover:text-cream transition-colors">
-					ORDENAR X WHATSAPP
+				<a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class="rounded-md border-2 border-ink px-7 py-3.5 text-sm font-semibold tracking-wide text-ink hover:bg-ink hover:text-cream transition-all duration-400">
+					RESERVAR MESA
 				</a>
 			</div>
 		</div>
